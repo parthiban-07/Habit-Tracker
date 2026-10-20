@@ -22,3 +22,19 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Java build output
+**/target/
+
+# Accidentally copied JDK folder
+frontend/oracleJdk-27/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Backend logs
+backend_log.txt
+backend_logs.txt
+backend_logs_utf8.txt
+/oracleJdk-27/
