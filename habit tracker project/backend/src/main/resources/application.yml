@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: health-tracker
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:health_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE}
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER:org.h2.Driver}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database-platform: ${SPRING_JPA_DIALECT:org.hibernate.dialect.H2Dialect}
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+
+cors:
+  allowed-origins: ${FRONTEND_URL:http://localhost:5173,http://localhost:5174,http://localhost:3000}

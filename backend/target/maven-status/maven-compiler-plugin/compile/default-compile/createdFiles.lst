@@ -1,0 +1,11 @@
+com\tracker\health\controller\InsightController.class
+com\tracker\health\controller\TaskController.class
+com\tracker\health\config\WebSocketConfig.class
+com\tracker\health\HealthApplication.class
+com\tracker\health\service\AIEngineService.class
+com\tracker\health\service\TaskService.class
+com\tracker\health\model\UserHistory.class
+com\tracker\health\config\WebConfig.class
+com\tracker\health\repository\DailyTaskRepository.class
+com\tracker\health\repository\UserHistoryRepository.class
+com\tracker\health\model\DailyTask.class

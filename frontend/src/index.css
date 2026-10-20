@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Roboto", "Outfit", sans-serif;
+  --color-neon-cyan: #00f3ff;
+  --color-neon-indigo: #4b00ff;
+  --color-neon-violet: #8a2be2;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+  }
+
+  body {
+    background-color: theme('colors.black');
+    color: theme('colors.white');
+    font-family: theme('fontFamily.sans');
+  }
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-[32px];
+}
+
+.neon-mesh {
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(0, 243, 255, 0.15), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(75, 0, 255, 0.15), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(138, 43, 226, 0.15), transparent 25%);
+}
